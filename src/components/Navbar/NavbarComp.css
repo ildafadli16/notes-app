@@ -1,0 +1,13 @@
+.link {
+  text-decoration: none;
+  color: white;
+  padding-left: 30px;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: white;
+}
