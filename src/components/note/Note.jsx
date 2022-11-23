@@ -3,12 +3,12 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const Note = ({ note, notes, handleDeleteNote }) => {
-  const { id, title, date, body } = note;
+const Note = ({ note, handleDeleteNote }) => {
+  const { id, title, createdAt, body } = note;
   return (
     <div>
       <Card border="primary" style={{ width: "18rem" }}>
-        <Card.Header>{date}</Card.Header>
+        <Card.Header>{createdAt}</Card.Header>
         <Card.Body>
           <Card.Title>
             <Link to={`/${id}`}>{title}</Link>

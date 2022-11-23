@@ -26,7 +26,7 @@ const Register = () => {
   async function onRegisterHandler(user) {
     const { error } = await register(user);
     if (!error) {
-      navigate("/login");
+      navigate("/");
     }
   }
   const handleSaveClick = (e) => {
@@ -92,7 +92,7 @@ const Register = () => {
             </Card.Body>
             <Card.Footer className="text-muted">
               <p>
-                Kembali ke <Link to="/login">Masuk</Link>
+                Kembali ke <Link to="/">Masuk</Link>
               </p>
             </Card.Footer>
           </Card>

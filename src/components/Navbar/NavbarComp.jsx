@@ -12,6 +12,9 @@ const NavbarComp = ({ onLogout }) => {
         <Container>
           <Navbar.Brand href="#notes">Notes Apps</Navbar.Brand>
           <Nav className="ms-auto">
+            <NavLink className="link" to="/">
+              Home
+            </NavLink>
             <NavLink className="link" to="/add">
               Add Note
             </NavLink>

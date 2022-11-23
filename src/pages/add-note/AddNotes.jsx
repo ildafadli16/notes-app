@@ -3,7 +3,6 @@ import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import "../add-note/AddNotes.css";
 import { useState } from "react";
-import { nanoid } from "nanoid";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -11,9 +10,9 @@ const AddNotes = ({ handleAddNote }) => {
   const [noteText, setNoteText] = useState({
     title: "",
     body: "",
-    id: `notes-${+new Date()}`,
-    isArchive: false,
-    date: new Date().toISOString(),
+    // id: `notes-${+new Date()}`,
+    // archived: false,
+    // createdAt: new Date().toISOString(),
   });
 
   const navigate = useNavigate();
@@ -31,11 +30,6 @@ const AddNotes = ({ handleAddNote }) => {
     setNoteText({ title: "", body: "" });
     handleAddNote(noteText);
     navigate("/");
-
-    // if (noteText.trim().length > 0) {
-    //   handleAddNote(noteText);
-    //   setNoteText("");
-    // }
   };
   return (
     <div className="container">
